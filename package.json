@@ -1,0 +1,35 @@
+{
+  "name": "nina-app",
+  "version": "1.0.0",
+  "description": "Floating animated pixel-art avatar",
+  "author": "Your Name",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^38.0.0",
+    "electron-builder": "^26.0.0"
+  },
+  "build": {
+    "appId": "com.nina.app",
+    "productName": "Nina",
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "index.css"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
